@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Palagani Bhadradri Pavani</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e1f9f9, #f990db);
+      color: #333;
+    }
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #4A90E2, #50E3C2);
+      color: #fff;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #085591;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1, h2, h3 {
+      margin-bottom: 15px;
+    }
+    .skills, .projects, .experience, .education {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      text-align: left;
+    }
+    .card {
+      background: #f9fbfd;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #4A90E2, #50E3C2);
+      color: #fff;
+    }
+    /* Login Page Styles */
+    #login-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+    .login-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      width: 320px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: #4A90E2;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border 0.3s;
+    }
+    .login-box input:focus {
+      border: 1px solid #4A90E2;
+    }
+    .login-box button {
+      background: linear-gradient(135deg, #4A90E2, #50E3C2);
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .login-box button:hover {
+      background: linear-gradient(135deg, #357ABD, #30CFC2);
+    }
+    #login-msg {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    #portfolio-content {
+      display: none;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="login-page">
+    <div class="login-box">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p id="login-msg"></p>
+    </div>
+  </div>
+
+  <!-- Portfolio Content -->
+  <div id="portfolio-content">
+    <header>
+      <h1>Palagani Bhadradri Pavani</h1>
+      <p>B.E. in Information Science and Engineering | Passion for Technology & Coding</p>
+      <nav>
+        <a href="#Career objective">Career Obective</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="Career Objective" class="container">
+      <h2>Career Objective</h2>
+      <p>I am a final-year B.E. student in Information Science and Engineering with a CGPA of 7/10 at S.E.A College of Engineering and Technology. Passionate about coding and emerging technologies, I am skilled in Python, Java, C/C++, SQL, JavaScript, HTML/CSS, and MongoDB, and familiar with Git, Postman, and VS Code.</p>
+    </section>
+
+    <section id="skills" class="container">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="card"><h3>Programming</h3><p>Python, Java, C/C++, JavaScript, SQL</p></div>
+        <div class="card"><h3>Web</h3><p>HTML, CSS, MongoDB</p></div>
+        <div class="card"><h3>Tools</h3><p>Git, VS Code, Postman</p></div>
+      </div>
+    </section>
+
+    <section id="education" class="container">
+      <h2>Education</h2>
+      <div class="education">
+        <div class="card"><h3>B.E. in ISE</h3><p>S.E.A College of Engineering & Technology<br>CGPA: 7/10</p></div>
+        <div class="card"><h3>Class XII</h3><p>St. Anne's Pre-University College for Girls<br>Percentage: 73%</p></div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card"><h4>Book Library Management System <a href="u can Provide link of your project(github link)">link</a></h4>
+          <p>The Book Library Management System is a comprehensive digital solution for modern libraries. It simplifies the day-to-day operations of managing a book collection and its patrons, replacing manual, paper-based processes with an efficient, automated, and centralized system.</p></div>
+        <div class="card"><h4>Portfolio Website <a href="u can Provide link of your project(github link)">link</a></h4>
+          <p>A "My Portfolio Website" is a fundamental project for anyone looking to establish a professional digital footprint. It serves as a dynamic, interactive resume that showcases projects and skills with responsive design.</p></div>
+        <div class="card"><h4>Stock Price Prediction <a href="u can Provide link of your project(github link)">link</a></h4>
+          <p>Demonstrated application of machine learning techniques for stock market prediction. Built a model using historical data to analyze trends and forecast stock movements.</p></div>
+      </div>
+    </section>
+
+    <section id="experience" class="container">
+      <h2>Experience</h2>
+      <div class="experience">
+        <div class="card"><h3>Tata iQ (Forage)</h3><p>AI-powered data analytics job simulation, risk assessment, predictive modeling, and strategy design.</p></div>
+        <div class="card"><h3>AWS APAC (Forage)</h3><p>Solutions Architecture virtual program, designed scalable hosting systems.</p></div>
+        <div class="card"><h3>TCS (Forage)</h3><p>Data visualization simulation, created visuals for executive decision-making.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p>
+        📧 Email: <a href="mailto:bhadradripavani@gmail.com">bhadradripavani@gmail.com</a><br>
+        📱 Phone: 6360792924<br>
+        📍 Location: Bangalore<br>
+        🔗 LinkedIn: https://www.linkedin.com/in/p-b-pavani-1081422b5<br>
+        💻 GitHub: https://wwww.github.com<br>
+      </p>
+      <p><a href="resume.pdf" download class="download-btn">📄 Download Resume</a></p>
+    </section>
+
+    <footer>
+      <p>© 2025 Palagani Bhadradri Pavani | All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      const msg = document.getElementById('login-msg');
+
+      if(user === "pavani" && pass === "1234") {
+        document.getElementById('login-page').style.display = 'none';
+        document.getElementById('portfolio-content').style.display = 'block';
+      } else {
+        msg.textContent = "Invalid username or password";
+      }
+    }
+  </script>
+</body>
+</html>
